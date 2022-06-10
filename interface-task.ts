@@ -71,7 +71,7 @@ class Person{
   interface Person {
     name : string;
     age : number;
-    getSalary: (age:number) => number;
+    getSalary: (salary:number) => number;
   }
 
   class Employee implements Person { 
@@ -84,8 +84,8 @@ class Person{
         this.age = age;
     }
 
-    getSalary(age:number):number { 
-        return 30000;
+    getSalary(salary:number):number { 
+        return salary;
     }
 }
 
@@ -94,3 +94,7 @@ let emp2 = new Employee("Darshna", 28);
 let emp3 = new Employee("Jay", 28);
 let emp4 = new Employee("Jinesh", 27);
 let emp5 = new Employee("Ishwar", 30);
+
+console.log(emp1.name);
+console.log(emp1.age);
+console.log(emp1.getSalary(30000));
